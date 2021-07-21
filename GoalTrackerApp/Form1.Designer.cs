@@ -75,7 +75,7 @@
             this.addGoalButton.TabIndex = 3;
             this.addGoalButton.Text = "Add Goal";
             this.addGoalButton.UseVisualStyleBackColor = true;
-            this.addGoalButton.Click += new System.EventHandler(this.button1_Click);
+            this.addGoalButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // resetButton
             // 
@@ -96,7 +96,7 @@
             this.helpButton.TabIndex = 5;
             this.helpButton.Text = "Help";
             this.helpButton.UseVisualStyleBackColor = true;
-            this.helpButton.Click += new System.EventHandler(this.button3_Click);
+            this.helpButton.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Form1
             // 

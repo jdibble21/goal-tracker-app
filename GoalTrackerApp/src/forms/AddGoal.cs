@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace GoalTrackerApp.src.forms
 {
-    public partial class GoalDetails : Form
+    public partial class AddGoal : Form
     {
-        public GoalDetails()
+        public AddGoal()
         {
             InitializeComponent();
+        }
+
+        private void AddGoal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
