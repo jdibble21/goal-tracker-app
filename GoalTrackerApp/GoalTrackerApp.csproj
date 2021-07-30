@@ -145,6 +145,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GoalDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="src\dbScripts\dbScript.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
