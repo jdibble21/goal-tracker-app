@@ -83,6 +83,7 @@
     <Compile Include="src\forms\AddGoal.Designer.cs">
       <DependentUpon>AddGoal.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\logic\Goal.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,9 +123,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
