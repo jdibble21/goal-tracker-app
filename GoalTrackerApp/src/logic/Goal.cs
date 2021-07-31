@@ -8,9 +8,31 @@ namespace GoalTrackerApp.src.logic
 {
     class Goal
     {
-        Goal(String title, String description, int id = -1)
+        Goal(int id)
+        {
+            // TODO get goal data from db and assign as attributes
+        }
+
+        public void EditGoal(String newTitle = null, String newDesc = null, String newDate = null)
+        {
+            
+        }
+        private void UpdateGoalTitle(String newTitle)
         {
 
         }
+
+        private void UpdateGoalDescription(String newDesc)
+        {
+
+        }
+
+        private void UpdateGoalDueDate(String newDate)
+        {
+
+        }
+
+        private void UpdateEditDate(String newEdit)
+        
     }
 }
