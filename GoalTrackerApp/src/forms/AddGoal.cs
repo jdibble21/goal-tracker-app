@@ -7,24 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GoalTrackerApp.src.logic;
 
 namespace GoalTrackerApp.src.forms
 {
     public partial class AddGoal : Form
     {
+        private ProjectLogic pl = new ProjectLogic();
         public AddGoal()
         {
             InitializeComponent();
         }
 
-        private void AddGoal_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddGoalButton_Click(object sender, EventArgs e)
+        {
+            pl.UploadGoal(goalTitleTextBox.Text,goalDescriptionTextBox.Text,Convert.ToString(endGoalTimePicker.Value));
+        }
+
+       
     }
 }

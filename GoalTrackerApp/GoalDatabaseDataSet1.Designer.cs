@@ -20,9 +20,9 @@ namespace GoalTrackerApp {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GoalDatabaseDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GoalDatabaseDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GoalDatabaseDataSet : global::System.Data.DataSet {
+    public partial class GoalDatabaseDataSet1 : global::System.Data.DataSet {
         
         private GoalsDataTable tableGoals;
         
@@ -30,7 +30,7 @@ namespace GoalTrackerApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public GoalDatabaseDataSet() {
+        public GoalDatabaseDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GoalTrackerApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected GoalDatabaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GoalDatabaseDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace GoalTrackerApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GoalDatabaseDataSet cln = ((GoalDatabaseDataSet)(base.Clone()));
+            GoalDatabaseDataSet1 cln = ((GoalDatabaseDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace GoalTrackerApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GoalDatabaseDataSet";
+            this.DataSetName = "GoalDatabaseDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GoalDatabaseDataSet.xsd";
+            this.Namespace = "http://tempuri.org/GoalDatabaseDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableGoals = new GoalsDataTable();
@@ -225,7 +225,7 @@ namespace GoalTrackerApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GoalDatabaseDataSet ds = new GoalDatabaseDataSet();
+            GoalDatabaseDataSet1 ds = new GoalDatabaseDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -554,7 +554,7 @@ namespace GoalTrackerApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GoalDatabaseDataSet ds = new GoalDatabaseDataSet();
+                GoalDatabaseDataSet1 ds = new GoalDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -746,7 +746,7 @@ namespace GoalTrackerApp {
         }
     }
 }
-namespace GoalTrackerApp.GoalDatabaseDataSetTableAdapters {
+namespace GoalTrackerApp.GoalDatabaseDataSet1TableAdapters {
     
     
     /// <summary>
@@ -940,7 +940,7 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GoalDatabaseDataSet.GoalsDataTable dataTable) {
+        public virtual int Fill(GoalDatabaseDataSet1.GoalsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -953,9 +953,9 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GoalDatabaseDataSet.GoalsDataTable GetData() {
+        public virtual GoalDatabaseDataSet1.GoalsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GoalDatabaseDataSet.GoalsDataTable dataTable = new GoalDatabaseDataSet.GoalsDataTable();
+            GoalDatabaseDataSet1.GoalsDataTable dataTable = new GoalDatabaseDataSet1.GoalsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -963,14 +963,14 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GoalDatabaseDataSet.GoalsDataTable dataTable) {
+        public virtual int Update(GoalDatabaseDataSet1.GoalsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GoalDatabaseDataSet dataSet) {
+        public virtual int Update(GoalDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Goals");
         }
         
@@ -1279,7 +1279,7 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(GoalDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GoalDatabaseDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._goalsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Goals.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1298,7 +1298,7 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(GoalDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GoalDatabaseDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._goalsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Goals.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1316,7 +1316,7 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(GoalDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GoalDatabaseDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._goalsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Goals.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1358,7 +1358,7 @@ SELECT Id, title, description, goalDueTime, goalEnterDate, lastEditDate FROM Goa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(GoalDatabaseDataSet dataSet) {
+        public virtual int UpdateAll(GoalDatabaseDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

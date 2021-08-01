@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GoalDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GoalDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoalDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\forms\AddGoal.cs">
@@ -84,6 +89,7 @@
       <DependentUpon>AddGoal.cs</DependentUpon>
     </Compile>
     <Compile Include="src\logic\Goal.cs" />
+    <Compile Include="src\logic\ProjectLogic.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +115,17 @@
     </None>
     <None Include="GoalDatabaseDataSet.xss">
       <DependentUpon>GoalDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GoalDatabaseDataSet1.xsc">
+      <DependentUpon>GoalDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GoalDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoalDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoalDatabaseDataSet1.xss">
+      <DependentUpon>GoalDatabaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

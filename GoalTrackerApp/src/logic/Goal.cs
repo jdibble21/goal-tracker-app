@@ -33,6 +33,9 @@ namespace GoalTrackerApp.src.logic
         }
 
         private void UpdateEditDate(String newEdit)
+        {
+
+        }
         
     }
 }
