@@ -7,13 +7,19 @@ namespace GoalTrackerApp.src.logic
 {
     class ProjectLogic
     {
-        private SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jdtar\source\repos\goal-tracker-app\GoalTrackerApp\GoalDatabase.mdf;Integrated Security=True");
+        private SqlConnection conn;
 
         //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GoalDatabase.mdf;Integrated Security=True
         //Database GETs
 
+        public ProjectLogic()
+        {
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jdtar\source\repos\goal-tracker-app\GoalTrackerApp\GoalDatabase.mdf;Integrated Security=True");
+        }
+
         public ArrayList GetAllGoals()
         {
+            conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Goals", conn);
             SqlDataReader dr = cmd.ExecuteReader();
             ArrayList arlist = new ArrayList();

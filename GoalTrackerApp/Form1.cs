@@ -16,21 +16,22 @@ namespace GoalTrackerApp
 {
     public partial class Form1 : Form
     {
-        private ProjectLogic pl = new ProjectLogic();
+        private ProjectLogic pl;
 
         public Form1()
         {
             InitializeComponent();
+            pl = new ProjectLogic();
             this.Text = "Goal Tracker App";
             ArrayList currentGoals = pl.GetAllGoals();
-            PrintGoals(currentGoals);
-           
+            ShowCurrentGoals(currentGoals);
         }
-        public void PrintGoals(ArrayList goals)
+        public void ShowCurrentGoals(ArrayList goals)
         {
-            foreach(Array goalRow in goals)
+            foreach(String[] goalRow in goals)
             {
-                Console.WriteLine(goalRow);
+                String listItem = goalRow[1]+"   "+goalRow[3];
+                currentGoalList.Items.Add(listItem);
             }
         }
 
