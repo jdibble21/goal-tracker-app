@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,22 @@ namespace GoalTrackerApp
 {
     public partial class Form1 : Form
     {
-        
+        private ProjectLogic pl = new ProjectLogic();
+
         public Form1()
         {
             InitializeComponent();
             this.Text = "Goal Tracker App";
+            ArrayList currentGoals = pl.GetAllGoals();
+            PrintGoals(currentGoals);
+           
+        }
+        public void PrintGoals(ArrayList goals)
+        {
+            foreach(Array goalRow in goals)
+            {
+                Console.WriteLine(goalRow);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

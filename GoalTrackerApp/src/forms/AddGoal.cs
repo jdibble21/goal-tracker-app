@@ -32,7 +32,7 @@ namespace GoalTrackerApp.src.forms
 
         private void AddGoalButton_Click(object sender, EventArgs e)
         {
-            pl.UploadGoal(goalTitleTextBox.Text,goalDescriptionTextBox.Text,Convert.ToString(endGoalTimePicker.Value));
+            pl.InsertGoal(goalTitleTextBox.Text,goalDescriptionTextBox.Text,Convert.ToString(endGoalTimePicker.Value));
         }
 
        

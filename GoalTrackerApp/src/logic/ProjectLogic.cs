@@ -1,21 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GoalTrackerApp;
 using GoalTrackerApp.GoalDatabaseDataSetTableAdapters;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace GoalTrackerApp.src.logic
 {
     class ProjectLogic
     {
-        private GoalsTableAdapter dbConnection = new GoalsTableAdapter();
         private SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jdtar\source\repos\goal-tracker-app\GoalTrackerApp\GoalDatabase.mdf;Integrated Security=True");
 
         //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GoalDatabase.mdf;Integrated Security=True
-        public void UploadGoal(String title, String desc, String finishDate)
+        //Database GETs
+
+        public ArrayList GetAllGoals()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Goals", conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            ArrayList arlist = new ArrayList();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    String[] temp = new string[6];
+                    temp[0] = Convert.ToString(dr.GetInt32(0));
+                    temp[1] = dr.GetString(1);
+                    temp[2] = dr.GetString(2);
+                    temp[3] = dr.GetString(3);
+                    temp[4] = dr.GetString(4);
+                    temp[5] = dr.GetString(5);
+                    arlist.Add(temp);
+                }
+            }
+            return arlist;
+        }
+        //Database INSERTs
+        public void InsertGoal(String title, String desc, String finishDate)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO Goals (title,description,goalDueTime,goalEnterDate,lastEditDate) VALUES(@Title, @Desc, @FinishDate,@EnterDate,@EditDate)", conn);
             String localDate = Convert.ToString(DateTime.Now);
